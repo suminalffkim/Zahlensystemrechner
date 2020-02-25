@@ -1,0 +1,8 @@
+c:\users\myksm\onedrive\문서\visual studio 2015\Projects\Zahlenrechner\Zahlenrechner\bin\Debug\Zahlenrechner.exe.config
+c:\users\myksm\onedrive\문서\visual studio 2015\Projects\Zahlenrechner\Zahlenrechner\obj\Debug\Zahlenrechner.Properties.Resources.resources
+c:\users\myksm\onedrive\문서\visual studio 2015\Projects\Zahlenrechner\Zahlenrechner\obj\Debug\Zahlenrechner.csproj.GenerateResource.Cache
+c:\users\myksm\onedrive\문서\visual studio 2015\Projects\Zahlenrechner\Zahlenrechner\bin\Debug\Zahlenrechner.exe
+c:\users\myksm\onedrive\문서\visual studio 2015\Projects\Zahlenrechner\Zahlenrechner\bin\Debug\Zahlenrechner.pdb
+c:\users\myksm\onedrive\문서\visual studio 2015\Projects\Zahlenrechner\Zahlenrechner\obj\Debug\Zahlenrechner.Form1.resources
+c:\users\myksm\onedrive\문서\visual studio 2015\Projects\Zahlenrechner\Zahlenrechner\obj\Debug\Zahlenrechner.exe
+c:\users\myksm\onedrive\문서\visual studio 2015\Projects\Zahlenrechner\Zahlenrechner\obj\Debug\Zahlenrechner.pdb
