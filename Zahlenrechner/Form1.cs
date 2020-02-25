@@ -47,7 +47,8 @@ namespace Zahlenrechner
             
             
         }
-        //상단바 
+
+        //Leiste
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
             Graphics canvas = panel1.CreateGraphics();
@@ -119,7 +120,10 @@ namespace Zahlenrechner
             if (radioButton4.Checked == true)
                 switchcase = 4;
         }
+        void drawTable()
+        {
 
+        }
         void rechnen()
         {
             //Clear
@@ -130,14 +134,14 @@ namespace Zahlenrechner
             table.FillRectangle(drawPaint, 170, 65, 150, 25);
             table.FillRectangle(drawPaint, 170, 95, 150, 25);
 
-            zahl1 = Convert.ToInt32(textBox1.Text);
-
             switch (switchcase)
             {
                 //dual
                 case 1:
                     try
                     {
+                        zahl1 = Convert.ToInt32(textBox1.Text);
+
                         dual = zahl1.ToString();
                         dezimalzahl = Convert.ToInt32(dual, 2);
                         dez = dezimalzahl.ToString();
@@ -147,32 +151,46 @@ namespace Zahlenrechner
                     catch (Exception)
                     {
                         MessageBox.Show("Die gegebene Zahl ist nicht binär", "ERROR", MessageBoxButtons.OK);
-                        panel4.BackColor = backgroundColor;
-                        table.DrawString("Die gegebene Zahl ist nicht binär", new Font("Artifakt Element", 13), drawPaint, 5, 5);
                     }
                     break;
 
                 //oktal
                 case 2:
-                    oktal = zahl1.ToString();
-                    dezimalzahl = Convert.ToInt32(oktal, 8);
-                    dez = dezimalzahl.ToString();
-                    dual = Convert.ToString(dezimalzahl, 2);
-                    hexa = Convert.ToString(dezimalzahl, 16);
+                    try
+                    {
+                        zahl1 = Convert.ToInt32(textBox1.Text);
+                        oktal = zahl1.ToString();
+                        dezimalzahl = Convert.ToInt32(oktal, 8);
+                        dez = dezimalzahl.ToString();
+                        dual = Convert.ToString(dezimalzahl, 2);
+                        hexa = Convert.ToString(dezimalzahl, 16);
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Die Zahlformat ist ungültig");
+                    }
                     break;
 
                 //dezimal
                 case 3:
-                    dezimalzahl = zahl1;
-                    dual = Convert.ToString(dezimalzahl, 2);
-                    oktal = Convert.ToString(dezimalzahl, 8);
-                    dez = dezimalzahl.ToString();
-                    hexa = Convert.ToString(dezimalzahl, 16);
+                    try
+                    {
+                        zahl1 = Convert.ToInt32(textBox1.Text);
+                        dezimalzahl = zahl1;
+                        dual = Convert.ToString(dezimalzahl, 2);
+                        oktal = Convert.ToString(dezimalzahl, 8);
+                        dez = dezimalzahl.ToString();
+                        hexa = Convert.ToString(dezimalzahl, 16);
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Die Zahlformat ist ungültig");
+                    }
                     break;
 
                 //hexa
                 case 4:
-                    hexa = Convert.ToString(zahl1);
+                    hexa = textBox1.Text;
                     dezimalzahl = Convert.ToInt32(hexa, 16);
                     dez = dezimalzahl.ToString();
                     dual = Convert.ToString(dezimalzahl, 2);
